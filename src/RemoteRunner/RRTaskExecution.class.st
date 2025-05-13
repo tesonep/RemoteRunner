@@ -19,3 +19,12 @@ RRTaskExecution >> initialize [
 	super initialize.
 	id := UUID new.
 ]
+
+{ #category : 'requests' }
+RRTaskExecution >> taskRequest [
+	
+	^ RRTaskRequest new 
+		id: id;
+		valuable: task valuable;
+		yourself.
+]
